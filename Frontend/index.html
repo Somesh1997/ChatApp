@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatApp</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+        
+    <div class="chat-container">
+         <div class="chat-box">
+         </div>
+        <div class="chat-input">
+            <div class="chat-type-box">
+                <input type="text"  id="chat">
+            </div>
+            <div class="chat-send">Send</div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js" integrity="sha512-AcZyhRP/tbAEsXCCGlziPun5iFvcSUpEz2jKkx0blkYKbxU81F+iq8FURwPn1sYFeksJ+sDDrI5XujsqSobWdQ==" crossorigin="anonymous"></script>
+    <!--  html ki file ke pass pahle socket nahi tha  UI ko hm CDN Se Socket Available Karva Rahe hai  Yah Socket ka code leke aa gaya usses hme IO banda milta hai jis par hmne connect lagaya hai  -->
+ <!--  yah app.js se connect karega socket ek Id le ke aata hai -->
+ <script> 
+  const socket=io.connect("http://localhost:3000");
+</script>
+    <script src="./script.js"></script>
+    <script src="./socket.js"></script>
+</body>
+</html>
